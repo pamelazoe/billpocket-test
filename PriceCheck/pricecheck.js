@@ -56,14 +56,14 @@
 
 const priceCheck = (products, productPrices, productSold, soldPrice) => {
     const mergeIntoObject = (product, price) => {
-        return product.reduce((obj, k, i) => ({
+        return product.reduce((obj, key, index) => ({
             ...obj,
-            [k]: price[i]
+            [key]: price[index]
         }), {});
     }
     let forSale = mergeIntoObject(products, productPrices);
     let sold = mergeIntoObject(productSold, soldPrice);
-    let errors = Object.entries(sold).reduce((ac, [key, v]) => forSale[key] && forSale[key] !== v ? (ac[key] = forSale[key], ac) : ac, {});
+    let errors = Object.entries(sold).reduce((acc, [key, value]) => forSale[key] && forSale[key] !== value ? (acc[key] = forSale[key], acc) : acc, {});
     return Object.entries(errors).length;
 }
 
