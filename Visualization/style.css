@@ -9,7 +9,17 @@ html, body{
     justify-content: center;
     /* background: linear-gradient(90deg, #EEEDF2 0%, #D7D6DD 93.13%); */
     background: linear-gradient(90deg, rgb(242, 241, 237) 0%, #D7D6DD 93.13%);
-    background-image: url(https://images.unsplash.com/photo-1568394824200-457c8c3cb6dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1526&q=80)
+    background-image: url(https://images.unsplash.com/photo-1568394824200-457c8c3cb6dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1526&q=80);
+    align-content: space-between;
+}
+
+header{
+    font-family: 'Quattrocento Sans', sans-serif;
+    position: absolute;
+    top: 15%;
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing: 0.20em;
 }
 
 .container{
@@ -20,9 +30,9 @@ html, body{
     /* background: #FFFFFF;
     box-shadow: 90px 90px 96px rgba(0, 0, 0, 0.35); */
     border-radius: 8px;
-    max-height: 70%;
+    max-height: 52%;
     position: fixed;
-    top:15%;
+    top:27%;
     font-family: 'Quattrocento Sans', sans-serif;
 }
 
