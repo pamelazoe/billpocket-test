@@ -11,15 +11,32 @@
 const input = document.querySelector(".user-input");
 const list = document.querySelector(".list");
 const insert = document.querySelector(".ins-btn");
+let content = [];
 
 const addElement = () => {
-    const addLi = (input.value.trim() !== "") ? `<li class="el-list">${input.value}</li>` : "";
-    list.insertAdjacentHTML("beforeend", addLi)
+    (input.value.trim() !== "") ? content.push(input.value) : "";
+    console.log(content)
+    const addLi = `<li class="el-list">${content[content.length-1]}</li>`;
+    
+    //const addLi = (input.value.trim() !== "") ? `<li class="el-list">${input.value}</li>` : "";
+    list.insertAdjacentHTML("beforeend", addLi);
+    list.scrollIntoView(false)
 }
+
+window.addEventListener("keydown", e => {
+    if(e.key === "Enter") {
+        addElement();
+        input.value= "";
+        input.focus();
+        list.scrollTop = list.scrollHeight - list.clientHeight;
+      }
+}, false)
 
 insert.addEventListener("click", e => {
     e.preventDefault();
     addElement();
     input.value= "";
     input.focus();
+    list.scrollTop = list.scrollHeight - list.clientHeight;
 }, false)
+
