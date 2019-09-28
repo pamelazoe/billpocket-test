@@ -59,10 +59,10 @@ input{
     height: 38px;
     border-radius: 5px;
     border:transparent;
-    width: 19%;
+    width: 22%;
     font-family: 'Quattrocento Sans', sans-serif;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.13);
-    font-size: .95em;
+    font-size: 1vw;
     margin-right: 7px;
     letter-spacing: 0.255em;
     justify-content: center;
